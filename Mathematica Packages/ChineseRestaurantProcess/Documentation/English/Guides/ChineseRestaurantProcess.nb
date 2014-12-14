@@ -1,0 +1,148 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4235,        138]
+NotebookOptionsPosition[      2599,         92]
+NotebookOutlinePosition[      3846,        124]
+CellTagsIndexPosition[      3803,        121]
+WindowTitle->ChineseRestaurantProcess - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "GuideColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ StyleBox[ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:guide/Mathematica"],
+  FontSlant->"Italic"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[CellGroupData[{
+
+Cell["ChineseRestaurantProcess", "GuideTitle",
+ CellID->942062912],
+
+Cell["\<\
+This package provides the function of simulating Chinese restaurant process  \
+(CRP) and calculcating relavent probability density functions.\
+\>", "GuideAbstract",
+ CellID->2001916300],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["RandomChineseRestaurant",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ChineseRestaurantProcess/ref/RandomChineseRestaurant"]],
+   "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " generates instances of CRP. Return types in the form of Configuration or \
+Frequency."
+}], "GuideText",
+ CellID->203374175],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["LogPDFCRP",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ChineseRestaurantProcess/ref/LogPDFCRP"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " gives the log probability density function for a given Configuration or \
+Frequency. "
+}], "GuideText",
+ CellID->1463276848],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["LogPDFnTable",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ChineseRestaurantProcess/ref/LogPDFnTable"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " gives the probability for a given number of tables from a CRP."
+}], "GuideText",
+ CellID->468273952],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["ConfigToFreq",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ChineseRestaurantProcess/ref/ConfigToFreq"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " transforms the results form from Configuration into Frequency. "
+}], "GuideText",
+ CellID->348729664]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 730},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"ChineseRestaurantProcess - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 2, 23, 14, 32, 29.2211369}", "context" -> 
+    "ChineseRestaurantProcess`", "keywords" -> {}, "index" -> True, "label" -> 
+    "Chinese Restaurant Process Guide", "language" -> "en", "paclet" -> 
+    "ChineseRestaurantProcess", "status" -> "None", "summary" -> 
+    "This package provides the function of simulating Chinese restaurant \
+process (CRP) and calculcating relavent probability density functions.", 
+    "synonyms" -> {}, "title" -> "ChineseRestaurantProcess", "type" -> 
+    "Guide", "uri" -> 
+    "ChineseRestaurantProcess/guide/ChineseRestaurantProcess"}, "LinkTrails" -> 
+  "", "SearchTextTranslated" -> ""},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[617, 21, 75, 1, 70, "GuideColorBar"],
+Cell[695, 24, 209, 6, 70, "LinkTrail"],
+Cell[CellGroupData[{
+Cell[929, 34, 66, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[998, 37, 195, 4, 70, "GuideAbstract",
+ CellID->2001916300],
+Cell[1196, 43, 367, 10, 70, "GuideText",
+ CellID->203374175],
+Cell[1566, 55, 340, 10, 70, "GuideText",
+ CellID->1463276848],
+Cell[1909, 67, 322, 9, 70, "GuideText",
+ CellID->468273952],
+Cell[2234, 78, 323, 9, 70, "GuideText",
+ CellID->348729664]
+}, Open  ]],
+Cell[2572, 90, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

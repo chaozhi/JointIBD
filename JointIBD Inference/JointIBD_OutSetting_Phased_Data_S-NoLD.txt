@@ -1,0 +1,55 @@
+isrestart = False
+ 
+isparallel = True
+ 
+ngroupofchain = 2
+ 
+nchainofgroup = 8
+ 
+heatingAR = 0.5
+ 
+datafile = "Data_S-NoLD.txt"
+ 
+outcompact = "JointIBD_OutCompact_Phased_Data_S-NoLD.txt"
+ 
+outcold = "JointIBD_OutCold_Phased_Data_S-NoLD.txt"
+ 
+outset = "JointIBD_OutSetting_Phased_Data_S-NoLD.txt"
+ 
+outstate = "JointIBD_MCMCState_Phased_Data_S-NoLD.txt"
+ 
+workdir = 
+    "D:\\Codes\\Mathematica\\JointIBD_MathematicaCode\\JointIBD Inference\\"
+ 
+packagedir = 
+    "D:\\Codes\\Mathematica\\JointIBD_MathematicaCode\\Mathematica Packages"
+ 
+nbp = 1000000
+ 
+nsq = 40
+ 
+pritheta = {2, 80, 0, Infinity}
+ 
+prirho = {2, 1/10000, 0, Infinity}
+ 
+prieps = {1, 1, 0, 1}
+ 
+maxcpden = Infinity
+ 
+rjfreq = 10
+ 
+adpmax = 10000
+ 
+adprate = 3/10000
+ 
+itmin = 1
+ 
+itmax = 1000001
+ 
+printfreq = 100
+ 
+savefreq = 10
+ 
+swapfreq = 8
+ 
+isprint = False

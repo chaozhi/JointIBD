@@ -1,0 +1,287 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      7735,        277]
+NotebookOptionsPosition[      5461,        205]
+NotebookOutlinePosition[      6465,        233]
+CellTagsIndexPosition[      6422,        230]
+WindowTitle->Metropolis - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "GuideColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ StyleBox[ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:guide/Mathematica"],
+  FontSlant->"Italic"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[CellGroupData[{
+
+Cell["Metropolis", "GuideTitle",
+ CellID->942062912],
+
+Cell["Chaozhi Zheng", "GuideAbstract",
+ CellID->131282621],
+
+Cell["\<\
+The functions of this packages provide Metropolis type sampler for Markov \
+Chain Monte Carlo simulations.\
+\>", "GuideAbstract",
+ CellID->2001916300],
+
+Cell[CellGroupData[{
+
+Cell["Adaptive Proposal Distribution", "GuideFunctionsSubsection",
+ CellID->554343856],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["StudentTDisplacements",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Metropolis/ref/StudentTDisplacements"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " generates samples from the student T distribution with mean zeros"
+}], "GuideText",
+ CellID->394776081],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["InitialProposal",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Metropolis/ref/InitialProposal"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " initializes  parameters for adpative proposal distributions"
+}], "GuideText",
+ CellID->32465365],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["AdaptiveProposal",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Metropolis/ref/AdaptiveProposal"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " adapts proposal distributions"
+}], "GuideText",
+ CellID->234820145],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["InitialProposalScale",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Metropolis/ref/InitialProposalScale"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " initializes  parameters for the scale of proposal distributions"
+}], "GuideText",
+ CellID->91619440],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["AdaptiveProposalScale",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Metropolis/ref/AdaptiveProposalScale"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " adapts the scale of proposal distributions"
+}], "GuideText",
+ CellID->801291939]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Metropolis-type", "GuideFunctionsSubsection",
+ CellID->530490112],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["Metropolis",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Metropolis/ref/Metropolis"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "general metropolis-type updating"
+}], "GuideText",
+ CellID->413187],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["StudentTMetropolis",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Metropolis/ref/StudentTMetropolis"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "Metropolis-type updating with student T being the proposal distribution"
+}], "GuideText",
+ CellID->147466147],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["AdaptiveMetropolis",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Metropolis/ref/AdaptiveMetropolis"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "StudentTMetropolis updating with the variance of the proposal distribution \
+adapted every step"
+}], "GuideText",
+ CellID->38864019],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["MultiTryMetropolis",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Metropolis/ref/MultiTryMetropolis"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "Metropolis-type updating with multiple tries sampled from the proposal \
+distribution"
+}], "GuideText",
+ CellID->58398020]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Block Metropolis-type", "GuideFunctionsSubsection",
+ CellID->191853877],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["BlockMetropolis",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Metropolis/ref/BlockMetropolis"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "Metropolis for a set of (conditional) indepdent variables"
+}], "GuideText",
+ CellID->677135391],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["BlockStudentTMetropolis",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Metropolis/ref/BlockStudentTMetropolis"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "StudentTMetropolis for a set of (conditional) indepdent variables"
+}], "GuideText",
+ CellID->360913553],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["BlockAdaptiveMetropolis",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Metropolis/ref/BlockAdaptiveMetropolis"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "AdaptiveMetropolis for a set of (conditional) indepdent variables"
+}], "GuideText",
+ CellID->133441658]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 730},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Metropolis - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 2, 10, 17, 35, 4.3577496}", "context" -> "Metropolis`", 
+    "keywords" -> {}, "index" -> True, "label" -> "Metropolis Guide", 
+    "language" -> "en", "paclet" -> "Metropolis", "status" -> "None", 
+    "summary" -> "Chaozhi Zheng", "synonyms" -> {}, "title" -> "Metropolis", 
+    "type" -> "Guide", "uri" -> "Metropolis/guide/Metropolis"}, "LinkTrails" -> 
+  "", "SearchTextTranslated" -> ""},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[603, 21, 75, 1, 70, "GuideColorBar"],
+Cell[681, 24, 209, 6, 70, "LinkTrail"],
+Cell[CellGroupData[{
+Cell[915, 34, 52, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[970, 37, 58, 1, 70, "GuideAbstract",
+ CellID->131282621],
+Cell[1031, 40, 160, 4, 70, "GuideAbstract",
+ CellID->2001916300],
+Cell[CellGroupData[{
+Cell[1216, 48, 86, 1, 70, "GuideFunctionsSubsection",
+ CellID->554343856],
+Cell[1305, 51, 329, 9, 70, "GuideText",
+ CellID->394776081],
+Cell[1637, 62, 307, 8, 70, "GuideText",
+ CellID->32465365],
+Cell[1947, 72, 283, 9, 70, "GuideText",
+ CellID->234820145],
+Cell[2233, 83, 324, 9, 70, "GuideText",
+ CellID->91619440],
+Cell[2560, 94, 306, 9, 70, "GuideText",
+ CellID->801291939]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2903, 108, 71, 1, 70, "GuideFunctionsSubsection",
+ CellID->530490112],
+Cell[2977, 111, 273, 9, 70, "GuideText",
+ CellID->413187],
+Cell[3253, 122, 334, 10, 70, "GuideText",
+ CellID->147466147],
+Cell[3590, 134, 357, 11, 70, "GuideText",
+ CellID->38864019],
+Cell[3950, 147, 347, 11, 70, "GuideText",
+ CellID->58398020]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4334, 163, 77, 1, 70, "GuideFunctionsSubsection",
+ CellID->191853877],
+Cell[4414, 166, 311, 9, 70, "GuideText",
+ CellID->677135391],
+Cell[4728, 177, 338, 10, 70, "GuideText",
+ CellID->360913553],
+Cell[5069, 189, 338, 10, 70, "GuideText",
+ CellID->133441658]
+}, Open  ]]
+}, Open  ]],
+Cell[5434, 203, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

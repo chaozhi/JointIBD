@@ -1,0 +1,264 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      8701,        254]
+NotebookOptionsPosition[      6504,        192]
+NotebookOutlinePosition[      8130,        234]
+CellTagsIndexPosition[      8087,        231]
+WindowTitle->RandomChineseRestaurant - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["ChineseRestaurantProcess",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->
+   "paclet:ChineseRestaurantProcess/guide/ChineseRestaurantProcess"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["CHINESERESTAURANTPROCESS PACKAGE PACLET SYMBOL", "PacletNameCell"], 
+    Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"ChineseRestaurantProcess\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ChineseRestaurantProcess/guide/ChineseRestaurantProcess"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->
+         False], {"\<\"ChineseRestaurantProcess/ref/RandomChineseRestaurant\"\
+\>":>None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ChineseRestaurantProcess/ref/RandomChineseRestaurant"]}, 
+            Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/\
+ChineseRestaurantProcess/ref/RandomChineseRestaurant.html"], StandardForm]], 
+              "Input", TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "ChineseRestaurantProcess/ref/RandomChineseRestaurant", 
+             ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["RandomChineseRestaurant", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"RandomChineseRestaurant", "[", 
+       RowBox[{
+        StyleBox["n", "TI"], ",", 
+        StyleBox["\[Alpha]", "TR"], ",", 
+        StyleBox["\[Theta]", "TR"], ",", 
+        StyleBox["k", "TI"]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]generates k instances of the Chinese restaurant process \
+with discount parameter \[Alpha] and strength parameter \[Beta]. By default, \
+k=1."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[
+  FrameBox[
+   StyleBox[
+    RowBox[{"MORE", " ", "INFORMATION"}], "NotesFrameText"],
+   StripOnInput->False],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->377024761],
+
+Cell["The following options can be given: ", "Notes"],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon"], 
+    ButtonBox["ReturnType",
+     BaseStyle->"Link",
+     ButtonData->"paclet:ChineseRestaurantProcess/ref/ReturnType"], 
+    "Configuration", Cell[TextData[{
+     Cell[BoxData[
+      ButtonBox["ReturnType",
+       BaseStyle->"Link",
+       ButtonData->"paclet:ChineseRestaurantProcess/ref/ReturnType"]], 
+      "InlineFormula"],
+     " is an option specifying the form of returning results. ",
+     "In",
+     " case of 'Configuration', return a list of each instance {customers at \
+table 1,customers at table 2, ...}, and in case of 'Frequency' (default), \
+return a list of each instance {{number of customers in a table, number of \
+such tables},...}. "
+    }], "TableText"]}
+  }]], "3ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}},
+ GridBoxDividers->{"Rows" -> {{True, True}}}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["ChineseRestaurantProcess",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:ChineseRestaurantProcess/guide/ChineseRestaurantProcess"]], \
+"MoreAbout",
+ CellID->493144736]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 730},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"RandomChineseRestaurant - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 2, 23, 14, 32, 38.0663524}", "context" -> 
+    "ChineseRestaurantProcess`", "keywords" -> {}, "index" -> True, "label" -> 
+    "ChineseRestaurantProcess Package Paclet Symbol", "language" -> "en", 
+    "paclet" -> "ChineseRestaurantProcess Package", "status" -> "None", 
+    "summary" -> 
+    "RandomChineseRestaurant[n, \\[Alpha], \\[Theta], k] generates k \
+instances of the Chinese restaurant process with discount parameter \\[Alpha] \
+and strength parameter \\[Beta]. By default, k=1.", "synonyms" -> {}, "title" -> 
+    "RandomChineseRestaurant", "type" -> "Symbol", "uri" -> 
+    "ChineseRestaurantProcess/ref/RandomChineseRestaurant"}, "LinkTrails" -> 
+  "", "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[616, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[695, 24, 231, 6, 70, "LinkTrail"],
+Cell[929, 32, 2535, 58, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3489, 94, 66, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3558, 97, 631, 17, 70, "Usage"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4226, 119, 580, 17, 70, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->377024761],
+Cell[4809, 138, 53, 0, 70, "Notes"],
+Cell[4865, 140, 948, 23, 70, "3ColumnTableMod"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5850, 168, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[6272, 182, 190, 5, 70, "MoreAbout",
+ CellID->493144736]
+}, Open  ]],
+Cell[6477, 190, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,374 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     10194,        364]
+NotebookOptionsPosition[      7419,        276]
+NotebookOutlinePosition[      8412,        304]
+CellTagsIndexPosition[      8369,        301]
+WindowTitle->JointIBD - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "GuideColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ StyleBox[ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:guide/Mathematica"],
+  FontSlant->"Italic"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[CellGroupData[{
+
+Cell["JointIBD", "GuideTitle",
+ CellID->942062912],
+
+Cell["Chaozhi Zheng", "GuideAbstract",
+ CellID->2001916300],
+
+Cell["\<\
+The functions of this package provide components for inferring Joint IBD \
+among multiple chromosomes via Metropolis-Coupled Markov chain Monte Carlo \
+simulations.\
+\>", "GuideAbstract",
+ CellID->126542884],
+
+Cell[CellGroupData[{
+
+Cell["Definitions", "GuideFunctionsSubsection",
+ CellID->152258013],
+
+Cell[TextData[{
+ StyleBox["nsq",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Number of sequences/chromsomes."
+}], "GuideText",
+ CellID->813359922],
+
+Cell[TextData[{
+ StyleBox["nbp",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Length of chromosomes in unit of base pair."
+}], "GuideText",
+ CellID->95061961],
+
+Cell[TextData[{
+ StyleBox["ibdls",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " IBD states along chromosomes, represented as a matrix. Column 1 is the \
+location of change-point, column 2 is the IBD state after (including) the \
+change-point, and the last column (column 3) is the transition probability \
+between subsequent IBD states. "
+}], "GuideText",
+ CellID->361628544],
+
+Cell[TextData[{
+ StyleBox["snpls",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " SNP data matrix. Column 1 is the location of SNP sites, column 2 is the \
+alleles vector, column 3 is the allele frequecy of the first allele, and the \
+last coclumn (column 4) is the log likelihood given the IBD state."
+}], "GuideText",
+ CellID->44338242],
+
+Cell[TextData[{
+ StyleBox["theta",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " The non-IBD intensity. "
+}], "GuideText",
+ CellID->581249711],
+
+Cell[TextData[{
+ StyleBox["rho",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " The transtion rate of IBD states along chromosomes."
+}], "GuideText",
+ CellID->170810025],
+
+Cell[TextData[{
+ StyleBox["epsilon",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " The probability of an allelic typing error."
+}], "GuideText",
+ CellID->438033069],
+
+Cell[TextData[{
+ StyleBox["chainstate",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " The state of a MCMC chain consists of inverse temperature, log (full \
+posterior), {theta, epsilon, rho}, treels, adpaptive parameters, snpls}."
+}], "GuideText",
+ CellID->181994516],
+
+Cell[TextData[{
+ StyleBox["mcstate",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " The matrix of chainstates, and the element ",
+ Cell[BoxData[
+  SubscriptBox[
+   RowBox[{"(", "mcstate", ")"}], "ij"]], "InlineFormula"],
+ " is the chainstate for the ",
+ Cell[BoxData[
+  SuperscriptBox["j", "th"]], "InlineFormula"],
+ " chain of the ",
+ Cell[BoxData[
+  SuperscriptBox["i", "th"]], "InlineFormula"],
+ " group. "
+}], "GuideText",
+ CellID->632006144],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->188365336]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["JointIBD Sampler", "GuideFunctionsSubsection",
+ CellID->228728424],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["initializeJIBDchain",
+  BaseStyle->"Link",
+  ButtonData->"paclet:JointIBD/ref/initializeJIBDchain"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " initializes parameters for one MCMC chain"
+}], "GuideText",
+ CellID->1463276848],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["updateJIBDchain",
+  BaseStyle->"Link",
+  ButtonData->"paclet:JointIBD/ref/updateJIBDchain"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " updates chainstate for one MCMC chain"
+}], "GuideText",
+ CellID->40682956],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["swapJIBDchain",
+  BaseStyle->"Link",
+  ButtonData->"paclet:JointIBD/ref/swapJIBDchain"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " swaps temperatures of two random chosen chains in a group"
+}], "GuideText",
+ CellID->621670559],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["saveJIBDchain",
+  BaseStyle->"Link",
+  ButtonData->"paclet:JointIBD/ref/saveJIBDchain"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " save mcstate for all the chains"
+}], "GuideText",
+ CellID->81757367]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Likelihood", "GuideFunctionsSubsection",
+ CellID->291703505],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["IBDLogLikelihood",
+  BaseStyle->"Link",
+  ButtonData->"paclet:JointIBD/ref/IBDLogLikelihood"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Log likelihood of SNP data given IBD states"
+}], "GuideText",
+ CellID->145996996],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["IBDTransitionProb",
+  BaseStyle->"Link",
+  ButtonData->"paclet:JointIBD/ref/IBDTransitionProb"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Transtion probability between two IBD states of distance \[LessEqual] 1"
+}], "GuideText",
+ CellID->365391459],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["IBDTransitionType1",
+  BaseStyle->"Link",
+  ButtonData->"paclet:JointIBD/ref/IBDTransitionType1"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Transition type of two IBD states given their distance \[LessEqual] 1"
+}], "GuideText",
+ CellID->394355736],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["IBDTransitionType2",
+  BaseStyle->"Link",
+  ButtonData->"paclet:JointIBD/ref/IBDTransitionType2"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Transition type of two IBD states given their distance \[LessEqual] 2"
+}], "GuideText",
+ CellID->196604864],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["IBDTransition",
+  BaseStyle->"Link",
+  ButtonData->"paclet:JointIBD/ref/IBDTransition"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " generates an IBD state from a given IBD state, according to the modified \
+Chinese restaurant processes. "
+}], "GuideText",
+ CellID->139440851],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["IBDFoldTransition",
+  BaseStyle->"Link",
+  ButtonData->"paclet:JointIBD/ref/IBDFoldTransition"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " generates a series of IBD states by repeatly applying ",
+ Cell[TextData[ButtonBox["IBDTransition",
+  BaseStyle->"Link",
+  ButtonData->"paclet:JointIBD/ref/IBDTransition"]], "InlineFunctionSans"],
+ " on a given IBD state. "
+}], "GuideText",
+ CellID->216104769]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 730},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"JointIBD - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 9, 20, 13, 43, 58.6082977}", "context" -> "JointIBD`", 
+    "keywords" -> {}, "index" -> True, "label" -> "Joint I B D Guide", 
+    "language" -> "en", "paclet" -> "JointIBD", "status" -> "None", "summary" -> 
+    "Chaozhi Zheng", "synonyms" -> {}, "title" -> "JointIBD", "type" -> 
+    "Guide", "uri" -> "JointIBD/guide/JointIBD"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[601, 21, 75, 1, 70, "GuideColorBar"],
+Cell[679, 24, 209, 6, 70, "LinkTrail"],
+Cell[CellGroupData[{
+Cell[913, 34, 50, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[966, 37, 59, 1, 70, "GuideAbstract",
+ CellID->2001916300],
+Cell[1028, 40, 217, 5, 70, "GuideAbstract",
+ CellID->126542884],
+Cell[CellGroupData[{
+Cell[1270, 49, 67, 1, 70, "GuideFunctionsSubsection",
+ CellID->152258013],
+Cell[1340, 52, 176, 7, 70, "GuideText",
+ CellID->813359922],
+Cell[1519, 61, 187, 7, 70, "GuideText",
+ CellID->95061961],
+Cell[1709, 70, 404, 10, 70, "GuideText",
+ CellID->361628544],
+Cell[2116, 82, 365, 9, 70, "GuideText",
+ CellID->44338242],
+Cell[2484, 93, 170, 7, 70, "GuideText",
+ CellID->581249711],
+Cell[2657, 102, 196, 7, 70, "GuideText",
+ CellID->170810025],
+Cell[2856, 111, 192, 7, 70, "GuideText",
+ CellID->438033069],
+Cell[3051, 120, 295, 8, 70, "GuideText",
+ CellID->181994516],
+Cell[3349, 130, 473, 17, 70, "GuideText",
+ CellID->632006144],
+Cell[3825, 149, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->188365336]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3920, 155, 72, 1, 70, "GuideFunctionsSubsection",
+ CellID->228728424],
+Cell[3995, 158, 300, 9, 70, "GuideText",
+ CellID->1463276848],
+Cell[4298, 169, 283, 8, 70, "GuideText",
+ CellID->40682956],
+Cell[4584, 179, 300, 8, 70, "GuideText",
+ CellID->621670559],
+Cell[4887, 189, 273, 8, 70, "GuideText",
+ CellID->81757367]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5197, 202, 66, 1, 70, "GuideFunctionsSubsection",
+ CellID->291703505],
+Cell[5266, 205, 292, 8, 70, "GuideText",
+ CellID->145996996],
+Cell[5561, 215, 322, 8, 70, "GuideText",
+ CellID->365391459],
+Cell[5886, 225, 325, 9, 70, "GuideText",
+ CellID->394355736],
+Cell[6214, 236, 325, 9, 70, "GuideText",
+ CellID->196604864],
+Cell[6542, 247, 348, 9, 70, "GuideText",
+ CellID->139440851],
+Cell[6893, 258, 472, 12, 70, "GuideText",
+ CellID->216104769]
+}, Open  ]]
+}, Open  ]],
+Cell[7392, 274, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,538 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     15953,        528]
+NotebookOptionsPosition[     12650,        426]
+NotebookOutlinePosition[     14541,        476]
+CellTagsIndexPosition[     14456,        471]
+WindowTitle->InitialProposal - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["Metropolis",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:Metropolis/guide/Metropolis"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["METROPOLIS PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Metropolis\"\>":>Documentation`HelpLookup[
+       "paclet:Metropolis/guide/Metropolis"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Metropolis/ref/InitialProposal\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["Metropolis/ref/InitialProposal"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/Metropolis/ref/\
+InitialProposal.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "Metropolis/ref/InitialProposal", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["InitialProposal", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"InitialProposal", "[", 
+       RowBox[{"targetratio", ",", "x0", ",", "r", ",", " ", "q"}], "]"}]], 
+      "InlineFormula"],
+     "\[LineSeparator]initializes adpative parameter set ",
+     StyleBox["adpset",
+      FontSlant->"Italic"],
+     "  from the target accept ratio ",
+     StyleBox["targetratio", "TI"],
+     " and initial value ",
+     StyleBox["x0", "TI"],
+     ". The optional  ",
+     StyleBox["r", "TI"],
+     "=0.5 and ",
+     StyleBox["q", "TI"],
+     "=0.005. "
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"InitialProposal", "[", 
+       RowBox[{"targetratiols", ",", "xls0", ",", "r", ",", " ", "q"}], 
+       "]"}]], "InlineFormula"],
+     "\[LineSeparator]initializes adpative parameter set ",
+     StyleBox["adpset",
+      FontSlant->"Italic"],
+     "  from the target accept ratio ",
+     StyleBox["targetratiols", "TI"],
+     " and initial values ",
+     StyleBox["xls0", "TI"],
+     ". The optional ",
+     StyleBox["r", "TI"],
+     "=0.5 and",
+     "  ",
+     StyleBox["q", "TI"],
+     "=0.005. "
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {None, {None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[
+  FrameBox[
+   StyleBox[
+    RowBox[{"MORE", " ", "INFORMATION"}], "NotesFrameText"],
+   StripOnInput->False],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->575999371],
+
+Cell[TextData[{
+ "The ",
+ StyleBox["adpset",
+  FontSlant->"Italic"],
+ " =  {targetratio, q, accept, scale, mu, cov} where the ",
+ StyleBox["accept", "TI"],
+ " denotes the accept ratio, the ",
+ StyleBox["scale", "TI"],
+ " measures the width of the proposal distribution and it is used to adjust \
+the accept ratio, and the ",
+ StyleBox["mu", "TI"],
+ " and ",
+ StyleBox["cov", "TI"],
+ " store the mean and covariance. "
+}], "Notes",
+ CellID->692045542]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->421084072],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->73556],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Metropolis`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->22466094],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"InitialProposal", "[", 
+  RowBox[{"0.234", ",", "0.6"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"InitialProposal", "[", 
+  RowBox[{"0.234", ",", 
+   RowBox[{"{", "0.4", "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"InitialProposal", "[", 
+  RowBox[{"0.234", ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0.2"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"InitialProposal", "[", 
+  RowBox[{"0.234", ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0.2"}], "}"}], ",", "0.4", ",", "0.04"}], 
+  "]"}]}], "Input",
+ CellLabel->"In[2]:=",
+ CellID->259251077],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0.234`", ",", "0.5`", ",", "0.05`", ",", "0.234`", ",", "1", ",", "0.6`", 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"{", "1", "}"}], "}"}]}], "}"}]], "Output",
+ ImageSize->{266, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->81161557],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.234`", ",", "0.5`", ",", "0.05`", ",", "0.234`", ",", "1", ",", 
+   RowBox[{"{", "0.4`", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"{", "1", "}"}], "}"}]}], "}"}]], "Output",
+ ImageSize->{280, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->301487534],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.234`", ",", "0.5`", ",", "0.05`", ",", "0.234`", ",", "1", ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0.2`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], "}"}]], "Output",
+ ImageSize->{366, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->142788204],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.234`", ",", "0.4`", ",", "0.04`", ",", "0.234`", ",", "1", ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0.2`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], "}"}]], "Output",
+ ImageSize->{366, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->638128909]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"InitialProposal", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0.234", ",", "0.44", ",", "0.234"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0.2"}], "}"}], ",", 
+     RowBox[{"{", "3.2", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "3", ",", "3.4"}], "}"}]}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"InitialProposal", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0.234", ",", "0.44", ",", "0.234"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0.2"}], "}"}], ",", "3.2", ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "3", ",", "3.4"}], "}"}]}], "}"}], ",", "0.7", ",", 
+   "0.07"}], "]"}]}], "Input",
+ CellLabel->"In[3]:=",
+ CellID->781052115],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0.234`", ",", "0.44`", ",", "0.234`"}], "}"}], ",", "0.5`", ",", 
+   "0.05`", ",", 
+   RowBox[{"{", 
+    RowBox[{"0.234`", ",", "0.44`", ",", "0.234`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0.2`"}], "}"}], ",", 
+     RowBox[{"{", "3.2`", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "3", ",", "3.4`"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "1"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"{", "1", "}"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "1", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], "}"}]}], "}"}]}], 
+  "}"}]], "Output",
+ ImageSize->{427, 50},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->218367745],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0.234`", ",", "0.44`", ",", "0.234`"}], "}"}], ",", "0.7`", ",", 
+   "0.07`", ",", 
+   RowBox[{"{", 
+    RowBox[{"0.234`", ",", "0.44`", ",", "0.234`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0.2`"}], "}"}], ",", "3.2`", ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "3", ",", "3.4`"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "1"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"{", "1", "}"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "1", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], "}"}]}], "}"}]}], 
+  "}"}]], "Output",
+ ImageSize->{413, 50},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->707415740]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["Metropolis",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Metropolis/guide/Metropolis"]], "MoreAbout",
+ CellID->70092628]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 730},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"InitialProposal - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 2, 10, 17, 35, 35.1965134}", "context" -> "Metropolis`",
+     "keywords" -> {}, "index" -> True, "label" -> "Metropolis Paclet Symbol",
+     "language" -> "en", "paclet" -> "Metropolis", "status" -> "None", 
+    "summary" -> 
+    "InitialProposal[targetratio, x0, r, q] initializes adpative parameter \
+set adpset from the target accept ratio targetratio and initial value x0. The \
+optional r=0.5 and q=0.005. InitialProposal[targetratiols, xls0, r, q] \
+initializes adpative parameter set adpset from the target accept ratio \
+targetratiols and initial values xls0. The optional r=0.5 and q=0.005. ", 
+    "synonyms" -> {}, "title" -> "InitialProposal", "type" -> "Symbol", "uri" -> 
+    "Metropolis/ref/InitialProposal"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[5720, 178, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->421084072]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 14313, 464}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[608, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[687, 24, 185, 5, 70, "LinkTrail"],
+Cell[875, 31, 2339, 53, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3239, 88, 58, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3300, 91, 1313, 43, 70, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4650, 139, 580, 17, 70, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->575999371],
+Cell[5233, 158, 450, 15, 70, "Notes",
+ CellID->692045542]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5720, 178, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->421084072],
+Cell[CellGroupData[{
+Cell[6206, 195, 144, 5, 70, "ExampleSection",
+ CellID->73556],
+Cell[6353, 202, 118, 3, 70, "Input",
+ CellID->22466094],
+Cell[CellGroupData[{
+Cell[6496, 209, 586, 16, 70, "Input",
+ CellID->259251077],
+Cell[7085, 227, 329, 11, 36, "Output",
+ CellID->81161557],
+Cell[7417, 240, 347, 10, 36, "Output",
+ CellID->301487534],
+Cell[7767, 252, 478, 15, 36, "Output",
+ CellID->142788204],
+Cell[8248, 269, 478, 15, 36, "Output",
+ CellID->638128909]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8763, 289, 788, 25, 70, "Input",
+ CellID->781052115],
+Cell[9554, 316, 1226, 40, 71, "Output",
+ CellID->218367745],
+Cell[10783, 358, 1200, 39, 71, "Output",
+ CellID->707415740]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12044, 404, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[12466, 418, 142, 3, 70, "MoreAbout",
+ CellID->70092628]
+}, Open  ]],
+Cell[12623, 424, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
